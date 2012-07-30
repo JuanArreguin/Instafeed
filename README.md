@@ -1,4 +1,5 @@
-Instafeed
+## Instafeed
+
 www.juanarreguin.com/plugins/instafeed
 
 

@@ -24,7 +24,6 @@ Run the plugin
 
 ```javascript
 
-```
 
 
 ## Authentication

@@ -1,0 +1,156 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <title>Instafeed by JuanArreguin</title>
+
+    <link rel="stylesheet" href="stylesheets/styles.css">
+    <link rel="stylesheet" href="stylesheets/pygment_trac.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <!--[if lt IE 9]>
+    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+  </head>
+  <body>
+    <div class="wrapper">
+      <header>
+        <h1>Instafeed</h1>
+        <p>Instagram Feed</p>
+
+        <p class="view"><a href="https://github.com/JuanArreguin/Instafeed">View the Project on GitHub <small>JuanArreguin/Instafeed</small></a></p>
+
+
+        <ul>
+          <li><a href="https://github.com/JuanArreguin/Instafeed/zipball/master">Download <strong>ZIP File</strong></a></li>
+          <li><a href="https://github.com/JuanArreguin/Instafeed/tarball/master">Download <strong>TAR Ball</strong></a></li>
+          <li><a href="https://github.com/JuanArreguin/Instafeed">View On <strong>GitHub</strong></a></li>
+        </ul>
+      </header>
+      <section>
+        <h2>Instafeed</h2>
+
+<p><a href="http://www.juanarreguin.com/plugins/instafeed">www.juanarreguin.com/plugins/instafeed</a></p>
+
+<p>A simple jQuery plugin to show a list of Instagram photos.</p>
+
+<h2>Usage</h2>
+
+<p>Insert an empty <code>div</code> with class <code>feed</code></p>
+
+<div class="highlight"><pre><span class="nt">&lt;div</span> <span class="na">id=</span><span class="s">"instagram"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"feed"</span><span class="nt">&gt;&lt;/div&gt;</span>
+<span class="nt">&lt;/div&gt;</span>
+</pre></div>
+
+<p>Import the script</p>
+
+<div class="highlight"><pre><span class="nt">&lt;script </span><span class="na">src=</span><span class="s">"javascripts/instagram.js"</span><span class="nt">&gt;&lt;/script&gt;</span>
+</pre></div>
+
+<p>Import the fancyBox <code>v2.0.6 fancyapps.com</code> plugin</p>
+
+<div class="highlight"><pre><span class="nt">&lt;script </span><span class="na">src=</span><span class="s">"javascripts/plugins.js"</span><span class="nt">&gt;&lt;/script&gt;</span>
+</pre></div>
+
+<p>Run the plugin</p>
+
+<div class="highlight"><pre><span class="nx">$</span><span class="p">(</span><span class="nb">document</span><span class="p">).</span><span class="nx">ready</span><span class="p">(</span><span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
+  <span class="nx">$</span><span class="p">(</span><span class="s2">".feed"</span><span class="p">).</span><span class="nx">instagram</span><span class="p">({</span>
+    <span class="nx">show</span> <span class="o">:</span> <span class="s1">'10'</span><span class="p">,</span>
+    <span class="nx">userId</span> <span class="o">:</span> <span class="s1">'[USER ID]'</span><span class="p">,</span>
+    <span class="nx">accessToken</span> <span class="o">:</span> <span class="s1">'[ACCESS TOKEN]'</span><span class="p">,</span>
+    <span class="nx">clientId</span><span class="o">:</span> <span class="s1">'[CLIENT ID]'</span>
+  <span class="p">});</span>        
+<span class="p">});</span>
+</pre></div>
+
+<h2>Authentication</h2>
+
+<p>You can obtain a client id registering a new Instagram API client app at <a href="http://instagr.am/developer/register/">http://instagr.am/developer/register/</a></p>
+
+<h2>Options</h2>
+
+<h3>hash</h3>
+
+<p>Search recent photos tagged with <code>hash</code>.
+See also <a href="http://instagram.com/developer/endpoints/tags/#get_tags_media_recent">http://instagram.com/developer/endpoints/tags/#get_tags_media_recent</a></p>
+
+<p>Authentication: <code>clientId</code> required</p>
+
+<p>Type: <code>String</code></p>
+
+<p>Default: <code>null</code></p>
+
+<h3>userId</h3>
+
+<p>Search recent by user <code>userId</code>.
+See also <a href="http://instagram.com/developer/endpoints/users/#get_users_media_recent">http://instagram.com/developer/endpoints/users/#get_users_media_recent</a></p>
+
+<p>Authentication: <code>accessToken</code> required.</p>
+
+<p>Type: <code>String</code></p>
+
+<p>Default: <code>null</code></p>
+
+<h3>accessToken</h3>
+
+<p>OAuth 2 access token.
+See also <a href="http://instagram.com/developer/auth/">http://instagram.com/developer/auth/</a></p>
+
+<p>Type: <code>String</code></p>
+
+<p>Default: <code>null</code></p>
+
+<h3>clientId</h3>
+
+<p>OAuth 2 client application id.
+See also <a href="http://instagram.com/developer/auth/">http://instagram.com/developer/auth/</a></p>
+
+<p>Type: <code>String</code></p>
+
+<p>Default: <code>null</code></p>
+
+<h3>show</h3>
+
+<p>Number of photos to show.</p>
+
+<p>Type: <code>Number</code></p>
+
+<p>Default: <code>null</code></p>
+
+<h3>onLoad</h3>
+
+<p>Called just before making the request to instagram API.</p>
+
+<p>Type: <code>Function</code></p>
+
+<p>Default: <code>null</code></p>
+
+<h3>onComplete</h3>
+
+<p>Called after the response from instagram API.</p>
+
+<p>Type: <code>Function</code></p>
+
+<p>Default: <code>null</code></p>
+      </section>
+      <footer>
+        <p>This project is maintained by <a href="https://github.com/JuanArreguin">JuanArreguin</a></p>
+        <p><small>Hosted on GitHub Pages &mdash; Theme by <a href="https://github.com/orderedlist">orderedlist</a></small></p>
+      </footer>
+    </div>
+    <script src="javascripts/scale.fix.js"></script>
+              <script type="text/javascript">
+            var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+            document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+          </script>
+          <script type="text/javascript">
+            try {
+              var pageTracker = _gat._getTracker("UA-33753023-1");
+            pageTracker._trackPageview();
+            } catch(err) {}
+          </script>
+
+  </body>
+</html>

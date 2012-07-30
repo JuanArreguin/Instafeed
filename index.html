@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<!--[if lt IE 7 ]><html class="ie ie6" lang="en"> <![endif]-->
+<!--[if IE 7 ]><html class="ie ie7" lang="en"> <![endif]-->
+<!--[if IE 8 ]><html class="ie ie8" lang="en"> <![endif]-->
+<!--[if (gte IE 9)|!(IE)]><!--><html lang="en"> <!--<![endif]-->
+<head>
+
+	<!-- Basic Page Needs
+  ================================================== -->
+	<meta charset="utf-8">
+	<title>Instafeed</title>
+	<meta name="description" content="Instagram feed for personal use">
+	<meta name="author" content="Juan Arreguin">
+
+	<!-- Mobile Specific Metas
+  ================================================== -->	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" />	<meta name="apple-mobile-web-app-capable" content="yes" />	<meta name="apple-mobile-web-app-status-bar-style" content="black" />	<meta name="format-detection" content="telephone=no" />
+
+	<!-- CSS
+  ================================================== -->
+  <link rel="stylesheet" href="stylesheets/default.css">
+	<link rel="stylesheet" href="stylesheets/fancybox.css">
+
+	<!--[if lt IE 9]>
+		<script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+	<![endif]-->
+
+</head>
+<body>
+  
+  <h1>Instafeed</h1>
+
+  <div id="instagram" class="container_full">
+  	<div class="feed"></div>
+  </div>
+
+
+	<!-- JS
+	================================================== -->
+	<script src="http://code.jquery.com/jquery-1.7.1.min.js"></script>	<!-- REWRITE '$' in jQuery to 'JQry'		------------------------------		<script type="text/javascript">	var JQry = jQuery.noConflict();</script>	-->    <!-- Instagram	================================================== -->
+  <script src='javascripts/instagram.js'></script>
+  <script src="javascripts/plugins.js"></script>	<script>
+	
+	  // Instagram
+	  
+	  $(document).ready(function() {
+	  	$(".feed").instagram({
+	  	  show : '10',
+	  	  userId : '340650',
+	  	  accessToken : '340650.f59def8.7b4923c820e342a5963f447c689fff69',
+	      clientId: '091e1fdfdb614e5591f8d29bebb0c9f6'
+	      });
+	     
+	  	});
+	  	
+	  	$(window).load(function () {
+	  	// Add "last" to the last item per row
+	   	$('div.instagram-placeholder').each( function(i) {
+	    	if( i % 5 != 4 )
+	      return
+	   	
+	   	//$(this).addClass('last')
+	   	
+	   	// On Hover fade image
+	   	$('.instagram-image').hover(function() {
+	   		$(this).fadeTo("400", 0.7 );
+	   	}, function() {
+	   		$(this).fadeTo("100", 1);
+	   	});
+	   	
+	  	})
+	  });
+	     </script>    <script>	/* iOS - All Clicks (Full Screen) Stay in Full-Screen Mode) */	(function(a,b,c){if(c in b&&b[c]){var d,e=a.location,f=/^(a|html)$/i;a.addEventListener("click",function(a){d=a.target;while(!f.test(d.nodeName))d=d.parentNode;"href"in d&&(d.href.indexOf("http")||~d.href.indexOf(e.host))&&(a.preventDefault(),e.href=d.href)},!1)}})(document,window.navigator,"standalone")</script>
+
+<!-- End Document
+================================================== -->
+</body>
+</html>

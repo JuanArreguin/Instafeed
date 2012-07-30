@@ -1,0 +1,11 @@
+body { font: bold 1em/1.5em "Helvetica Neue", Arial, Helvetica, Geneva, sans-serif; }
+
+h1 { display: block; text-align: center; line-height: 40px;
+}
+
+#instagram { max-width: 850px; margin: 0 auto; text-align: center; }
+
+.feed { margin-bottom:7px; display: inline-block; }
+.instagram-placeholder { display: inline-block; margin-right:20px; margin-bottom:20px; }
+.last { margin-right:0; }
+.instagram-placeholder a img {  }

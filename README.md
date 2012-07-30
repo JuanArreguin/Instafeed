@@ -7,23 +7,36 @@ A simple jQuery plugin to show a list of Instagram photos.
 
 ## Usage
 
+Insert an empty `div` with class `feed`
+
+```html
+<div id="instagram">
+  <div class="feed"></div>
+</div>
+```
+
 Import the script
 
 ```html
-<script src="jquery.instagram.js"></script>
+<script src="javascripts/instagram.js"></script>
 ```
-
-Insert an empty `div` in the code
+Import the fancyBox `v2.0.6 fancyapps.com` plugin
 
 ```html
-<div id="instagram" class="container_full">
-  <div class="feed"></div>
-</div>
+<script src="javascripts/plugins.js"></script>
 ```
 
 Run the plugin
 
 ```javascript
+$(document).ready(function() {
+  $(".feed").instagram({
+    show : '10',
+    userId : '[USER ID]',
+    accessToken : '[ACCESS TOKEN]',
+    clientId: '[CLIENT ID]'
+  });	     
+});
 
 ```
 

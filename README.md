@@ -1,6 +1,6 @@
 ## Instafeed
 
-www.juanarreguin.com/plugins/instafeed
+www.juanarreguin.com/plugins/Instafeed
 
 
 A simple jQuery plugin to show a list of Instagram photos.
